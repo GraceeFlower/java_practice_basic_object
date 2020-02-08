@@ -20,8 +20,8 @@ public class Student {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public String getAge() {
+        return age + "岁";
     }
 
     public void setAge(int age) {
