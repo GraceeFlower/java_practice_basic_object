@@ -2,7 +2,6 @@ import modul.Student;
 import modul.Teacher;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Application {
 
