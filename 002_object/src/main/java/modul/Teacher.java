@@ -7,12 +7,21 @@ public class Teacher {
     String name;
     ArrayList<Student> manageStudentsList = new ArrayList<>();
 
+    public Teacher(String name, ArrayList<Student> manageStudentsList) {
+        this.name = name;
+        this.manageStudentsList = manageStudentsList;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void addStudent(Student newStudent) {
+        this.manageStudentsList.add(newStudent);
     }
 
     public void setManageStudentsList(ArrayList<Student> manageStudentsList) {

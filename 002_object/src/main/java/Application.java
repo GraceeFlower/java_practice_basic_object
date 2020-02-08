@@ -1,6 +1,5 @@
 import modul.Student;
 import modul.Teacher;
-
 import java.util.ArrayList;
 
 public class Application {
@@ -14,18 +13,15 @@ public class Application {
         liLy.Study();
         liLy.Rest();
 
-        Teacher teacher = new Teacher();
-        teacher.setName("张龙");
         ArrayList<Student> studentsList = new ArrayList<>();
         Student wangQi = new Student("王其", 21, "男");
         studentsList.add(liLy);
         studentsList.add(wangQi);
-        teacher.setManageStudentsList(studentsList);
+        Teacher teacher = new Teacher("张龙", studentsList);
         Student zhaoYi = new Student("赵毅", 22, "男");
-        studentsList.add(zhaoYi);
-        teacher.setManageStudentsList(studentsList);
+        teacher.addStudent(zhaoYi);
 
-        System.out.println("\n-- ZhangLong's Students list --");
+        System.out.println("\n-- " + teacher.getName()+ "的管理学生信息 --");
         for (Student i: teacher.getManageStudentsList()) {
             System.out.println(i.getName() + "，"
                 + i.getAge() + "，" + i.getSex());
