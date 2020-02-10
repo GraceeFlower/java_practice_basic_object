@@ -12,14 +12,12 @@ public class Application {
             + liLy.getAge() + "," + liLy.getSex());
         liLy.Study();
         liLy.Rest();
-
+        
         ArrayList<Student> studentsList = new ArrayList<>();
-        Student wangQi = new Student("王其", 21, "男");
         studentsList.add(liLy);
-        studentsList.add(wangQi);
+        studentsList.add(new Student("王其", 21, "男"));
         Teacher teacher = new Teacher("张龙", studentsList);
-        Student zhaoYi = new Student("赵毅", 22, "男");
-        teacher.addStudent(zhaoYi);
+        teacher.addStudent(new Student("赵毅", 22, "男"));
 
         System.out.println("\n-- " + teacher.getName()+ "的管理学生信息 --");
         for (Student i: teacher.getManageStudentsList()) {
