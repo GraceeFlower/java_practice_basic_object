@@ -2,14 +2,17 @@ package modul;
 
 public class Student {
 
-    String name;
-    int age;
-    String sex;
+    private String name;
+    private int age;
+    private String sex;
 
     public Student(String name, int age, String sex) {
       this.name = name;
       this.age = age;
       this.sex = sex;
+    }
+
+    public Student() {
     }
 
     public String getName() {
@@ -38,10 +41,18 @@ public class Student {
 
     public void Study() {
           System.out.println("I love studying!");
-      }
+    }
 
-      public void Rest() {
+    public void Rest() {
           System.out.println("I always listen to music for rest.");
-      }
+    }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            ", sex='" + sex + '\'' +
+            '}';
+    }
 }

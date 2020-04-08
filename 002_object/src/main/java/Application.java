@@ -8,8 +8,7 @@ public class Application {
         Student liLy = new Student("李莉", 20, "女");
 
         System.out.println("-- Lily's Information --");
-        System.out.println(liLy.getName() + ","
-            + liLy.getAge() + "," + liLy.getSex());
+        System.out.println(liLy);
         liLy.Study();
         liLy.Rest();
         
@@ -20,9 +19,6 @@ public class Application {
         teacher.addStudent(new Student("赵毅", 22, "男"));
 
         System.out.println("\n-- " + teacher.getName()+ "的管理学生信息 --");
-        for (Student i: teacher.getManageStudentsList()) {
-            System.out.println(i.getName() + "，"
-                + i.getAge() + "，" + i.getSex());
-        }
+        teacher.getManageStudentsList().forEach(System.out::println);
     }
 }

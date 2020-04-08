@@ -12,6 +12,9 @@ public class Teacher {
         this.manageStudentsList = manageStudentsList;
     }
 
+    public Teacher() {
+    }
+
     public void setName(String name) {
         this.name = name;
     }
