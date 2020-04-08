@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Teacher {
 
-    String name;
-    ArrayList<Student> manageStudentsList = new ArrayList<>();
+    private String name;
+    private ArrayList<Student> manageStudentsList = new ArrayList<>();
 
     public Teacher(String name, ArrayList<Student> manageStudentsList) {
         this.name = name;
